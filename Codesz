@@ -1,0 +1,76 @@
+#include <stdio.h>
+#include <stdlib.h>
+int Motor1(inputee){
+    inputee = inputee + 10;
+    return inputee;
+
+
+
+
+
+}
+int Motor2(inputee2){
+    inputee2 = inputee2 + 10;
+    return inputee2;
+
+}
+int Motor3(inputee3){
+    inputee3 = inputee3 + 10;
+    return inputee3;
+}
+int Motor4(inputee4){
+    inputee4 = inputee4 + 10;
+    return inputee4;
+}
+int main()
+{
+    int motorVelocity1 = 20;
+    int motorVelocity2 = 20;
+    int motorVelocity3 = 20;
+    int motorVelocity4 = 20;
+
+    int inputUser;
+    printf(" Forward : 1 , Back : 2 ; Left : 3; right : 4; \n");
+    scanf("%d",&inputUser);
+     for (int x = 0; x<=5; x++){
+
+    if(inputUser == 1) {
+            motorVelocity1 = Motor1(motorVelocity1);
+            printf("%d %d %d %d",motorVelocity1,motorVelocity2,motorVelocity3,motorVelocity4);
+            if (x = 3) {
+                motorVelocity3 = motorVelocity1 + 10;
+            printf("%d %d %d %d",motorVelocity1,motorVelocity2,motorVelocity3,motorVelocity4);
+
+
+
+            }
+            if(x>5){
+                break;
+            }
+
+
+
+    }
+    else if(inputUser == 2) {
+            motorVelocity2 = Motor2(motorVelocity2);
+            printf("%d %d %d %d",motorVelocity1,motorVelocity2,motorVelocity3,motorVelocity4);
+
+    }
+
+
+else if(inputUser == 3) {
+            motorVelocity3 = Motor3(motorVelocity3);
+            printf("%d %d %d %d",motorVelocity1,motorVelocity2,motorVelocity3,motorVelocity4);
+
+    }
+else if(inputUser == 4) {
+            motorVelocity4 = Motor4(motorVelocity4);
+            printf("%d %d %d %d",motorVelocity1,motorVelocity2,motorVelocity3,motorVelocity4);
+
+    }
+     }\
+    return 0;
+}
+
+/* 1) Fix The error
+2) Make the modules more indipendant .(Basically The Motor module will have full control of the drone motors )                                 */
